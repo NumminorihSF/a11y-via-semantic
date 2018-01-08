@@ -10,13 +10,12 @@
 <body class="shower list">
 
 	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
+		<h1>Web A11y via semantic UI</h1>
 	</header>
 
 	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
+		<h2>Web A11y via semantic UI</h2>
+		<p>Brought to you by <a href="https://github.com/numminorihsf">Konstantin Petryaev</a></p>
 		<figure>
 			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
 			<figcaption class="white">
@@ -44,132 +43,228 @@
 	</section>
 
 	<section class="slide">
-		<h2>Shower key features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+		<h2>Why a11y?</h2>
+		<ul>
+			<li>Problems with eyesight</li>
+			<li>Bad motor skills</li>
+			<li>Cognitive problems</li>
+			<li>Different devices</li>
+		</ul>
 	</section>
 
 	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+		<h2>Why semantic?</h2>
+		<h2 class="shout">
+			<a href="https://www.w3.org/WAI/PF/aria/roles">We may use ARIA</a>
+		</h2>
 	</section>
 
 	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-	</section>
-
-	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</section>
-
-	<section class="slide">
-		<h2>Serious citations</h2>
+		<h2>Why semantic?</h2>
 		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
+			<img class="cover next" style="width: 100vh; height: 100vh" src="https://www.w3.org/WAI/PF/aria/rdf_model.png" alt="Roles' relationship's model">
 		</figure>
 	</section>
 
 	<section class="slide">
-		<h2>Code samples</h2>
+		<h2>Role via ARIA</h2>
 		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
+			<code>&lt;div role="progressbar" aria-valuemin="0"</code>
+			<code>  aria-valuemax="100" aria-valuenow="80" /&gt;</code>
 		</pre>
-	</section>
-
-	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</section>
-
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<figure>
-			<img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
-		</figure>
+		Need more:
+		<ul>
+			<li>content for display progress</li>
+			<li>styles</li>
+		</ul>
+		Result:
+		<div>
+			<div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
+				<div class="progress-bar">
+					<span style="width: 80%;"></span>
+				</div>
+			</div>
+		</div>
 		<style>
-			#picture h2 {
-				color:#FFF;
-				}
+			.progress-bar {
+				background-color: whiteSmoke;
+				border-radius: 2px;
+				box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+
+				width: 250px;
+				height: 20px;
+
+				position: relative;
+				display: block;
+			}
+
+			.progress-bar > span {
+				background-color: blue;
+				border-radius: 2px;
+
+				display: block;
+				text-indent: -9999px;
+				max-height: 100%;
+			}
 		</style>
 	</section>
 
 	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
+		<h2>Role via tag name</h2>
+		<pre>
+			<code>&lt;progress</code>
+			<code>  max="100"</code>
+			<code>  value="10"</code>
+			<code>/&gt;</code>
+		</pre>
+		Result:
+		<div>
+			<progress max="100" value="10">Some text inside</progress>
+		</div>
 	</section>
 
 	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
+		<h2>Focus state for div</h2>
+		<pre>
+			<code>&lt;div</code>
+			<code>  role="button"</code>
+			<code>  aria-pressed="false"</code>
+			<code>  tabindex="0"</code>
+			<code> /&gt;</code>
+		</pre>
+		Result:
+		<div>
+			<div role="button" tabindex="0">Focus me</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Focus state for button</h2>
+		<pre>
+			<code>&lt;button</code>
+			<code> /&gt;</code>
+		</pre>
+		Result:
+		<div>
+			<button>Focus me</button>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Click on div</h2>
+		<pre>
+			<code>&lt;div</code>
+			<code>  tabindex="0"</code>
+			<code>  onclick="alert('click');"</code>
+			<code> /&gt;</code>
+		</pre>
+		Result:
+		<div>
+			<div role="button" tabindex="0" onclick="alert('click');">Click me</div>
+		</div>
+		<p class="next">And via keyboard?</p>
+	</section>
+
+	<section class="slide">
+		<h2>Click on button</h2>
+		<pre>
+			<code>&lt;button</code>
+			<code>  onclick="alert('click');"</code>
+			<code> /&gt;</code>
+		</pre>
+		Result:
+		<div>
+			<button onclick="alert('click');">Click me</button>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Click on disabled div</h2>
+		<pre>
+			<code>&lt;div</code>
+			<code>  tabindex="0"</code>
+			<code>  onclick="alert('click')"</code>
+			<code>  disabled="disabled"</code>
+			<code> /&gt;</code>
+		</pre>
+		<p class="next">
+			<code>disabled</code> is not valid attr for <code>&lt;div /&gt;</code>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Click on disabled div</h2>
+		<pre>
+			<code>&lt;div tabindex="0"</code>
+			<code>  onclick="event.getAttribute('aria-disabled') ? </code>
+			<code>           void 0 : alert('click')"</code>
+			<code>  aria-disabled="true"</code>
+			<code> /&gt;</code>
+		</pre>
+		Result:
+		<div>
+			<div role="button" tabindex="0" aria-disabled="true" onclick="event.target.getAttribute('aria-disabled') ? void 0 : alert('click')">Click me</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Click disabled on button</h2>
+		<pre>
+			<code>&lt;button</code>
+			<code>  disabled="disabled"</code>
+			<code> /&gt;</code>
+		</pre>
+		Result:
+		<div>
+			<button disabled onclick="alert('click');">Click me</button>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Controls via keyboard</h2>
+		<pre>
+			<code>&lt;input type="radio" name="radio-name" value="1" /&gt;</code>
+			<code>&lt;input type="radio" name="radio-name" value="2" /&gt;</code>
+			<code>&lt;input type="radio" name="radio-name" value="3" /&gt;</code>
+			<code>&lt;input type="radio" name="radio-name" value="4" /&gt;</code>
+		</pre>
+		<div>
+			Result:
+			<label><input type="radio" name="radio-name" value="1">1</label>
+			<label><input type="radio" name="radio-name" value="2">2</label>
+			<label><input type="radio" name="radio-name" value="3">3</label>
+			<label><input type="radio" name="radio-name" value="4">4</label>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Label for inputs</h2>
+		<div>
+			<div><label>Input inside label: <input></label></div>
+			<div><label for="remote-id">Remote</label></div>
+			<div><label for="outside">Input outside label:</label> <input id="outside"></div>
+			<div><input id="remote-id"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Why do we use?</h2>
+		<ul>
+			<li><code>a[href="#"]</code></li>
+			<li><code>a[onclick=""]</code></li>
+			<li><code>outline: none</code></li>
+			<li><code>&lt;button&gt;{{icon}}&lt;/button&gt;</code></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Helpful links</h2>
+		<ul>
+			<li><a href="https://a11yproject.com">a11yproject.com [en]</a></li>
+			<li><a href="http://a11y.me/">a11y.me [en]</a></li>
+			<li><a href="https://www.w3.org/standards/webdesign/accessibility">w3c.org [en]</a></li>
+			<li><a href="https://weblind.ru/">weblind.ru [ru]</a></li>
+		</ul>
 	</section>
 
 	<section class="slide grid">
