@@ -437,22 +437,79 @@
 	</h2>
 </section>
 
+<section class="slide">
+	<h2>Semantic inside JS</h2>
+	<pre>
+		<code>const arr = [1, 2, 3, 4];</code>
+		<code>const len = arr.length;</code>
+		<code>let i = -1;</code>
+		<code>let result = [];</code>
+		<code>while (++i &lt; len) {</code>
+		<code>	const n = arr[i];</code>
+		<code>	if (n % 2 &gt; 0) continue;</code>
+		<code>	result.push(n * n);</code>
+		<code>}</code>
+	</pre>
+	<p>Works fast, but not very simple for understand.</p>
+</section>
 
+<section class="slide">
+	<h2>A bit readable</h2>
+	<pre>
+		<code>const arr = [1, 2, 3, 4];</code>
+		<code>const isEven = n =&gt; n % 2 === 0;</code>
+		<code>const square = n =&gt; n * n;</code>
+		<code>const result = arr</code>
+		<code>  .filter(isEven)</code>
+		<code>  .map(square);</code>
+	</pre>
+	<p>It's simple to understand this.</p>
+</section>
+
+<section class="slide">
+	<h2>Undefined means undefined</h2>
+	<pre>
+		<code>function someFunction(obj) {</code>
+		<code>  obj.fieldToRemove = undefined;</code>
+		<code>}</code>
+	</pre>
+	<ul class="next">
+		<li>If you need to remove field, use <code>delete obj.field;</code></li>
+		<li>If you need to remove value form field, use <code>obj.field = null;</code>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>Naming</h2>
+	<ul>
+		<li>Variable's or function's name should represent what variable is or what function do.</li>
+		<li>Don't obfuscate the name. <code>value</code> is better than <code>v</code>, and is much better than <code>val</code></li>
+	</ul>
+	<div>Bad examples:
+		<pre>
+			<code>items.map(route =&gt; {...});</code>
+			<code>function handleError(e) {...}</code>
+			<code>function a() {}</code>
+		</pre>
+	</div>
+</section>
 
 <section class="slide">
 	<h2>Helpful links</h2>
 	<ul>
 		<li><a href="https://a11yproject.com">[HTML] a11yproject.com [en]</a></li>
 		<li><a href="http://a11y.me/">[HTML] a11y.me [en]</a></li>
-		<li><a href="https://www.w3.org/standards/webdesign/accessibility">[HTML] w3c.org [en]</a></li>
-		<li><a href="https://weblind.ru/">[HTML] weblind.ru [ru]</a></li>
-		<li><a href="https://maintainablecss.com/chapters/semantics/">[CSS] maintainablecss.com [en]</a></li>
-		<li><a href="http://robdodson.me/css-semantics/">[CSS] robdodson.me [en]</a></li>
+		<li><a href="https://www.w3.org/standards/webdesign/accessibility">[HTML] W3C [en]</a></li>
+		<li><a href="https://weblind.ru/">[HTML] WebLind [ru]</a></li>
+		<li><a href="https://maintainablecss.com/chapters/semantics/">[CSS] MatintainableCSS [en]</a></li>
+		<li><a href="http://robdodson.me/css-semantics/">[CSS] Rob Dodson's blog [en]</a></li>
+		<li><a href="https://google.github.io/styleguide/jsguide.html">[JS] Google's js styleguide [en] </a> </li>
+		<li><a href="https://github.com/airbnb/javascript">[JS] Airbnb's js styleguide [en] </a> </li>
 	</ul>
 </section>
 
-<section class="slide grid">
-	<h2>All nicely aligned to grid</h2>
+<section class="slide">
+	<h2 class="shout">Thanks<br>Any question?</h2>
 </section>
 
 <section class="slide" id="see-more">
