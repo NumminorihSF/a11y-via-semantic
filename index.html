@@ -6,295 +6,479 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+	<style>
+		.full-screen {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
 </head>
 <body class="shower list">
 
-	<header class="caption">
-		<h1>Web A11y via semantic UI</h1>
-	</header>
+<header class="caption">
+	<h1>Write semantic code</h1>
+</header>
 
-	<section class="slide" id="cover">
-		<h2>Web A11y via semantic UI</h2>
-		<p>Brought to you by <a href="https://github.com/numminorihsf">Konstantin Petryaev</a></p>
-		<figure>
-			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
-			<figcaption class="white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
-		</figure>
-		<style>
-			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-				}
-			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-				}
-				#cover p a {
-					color:#FFF;
-					}
-		</style>
-	</section>
+<section class="slide" id="cover">
+	<h2>Write semantic code</h2>
+	<p>Brought to you by <a href="https://github.com/numminorihsf">Konstantin Petryaev</a></p>
+	<figure>
+		<img class="full-screen" src="pictures/cover.png" alt="Code sample from WebStorm">
+	</figure>
+	<style>
+		#cover h2 {
+			margin:30px 0 0;
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+		}
+		#cover p {
+			position: absolute;
+			bottom: 75px;
+			right: 40px;
+			text-align:center;
+			color:#FFF;
+			font-style:italic;
+			font-size:20px;
+		}
+		#cover p a {
+			color:#FFF;
+		}
+	</style>
+</section>
 
-	<section class="slide">
-		<h2>Why a11y?</h2>
+<section class="slide">
+	<h2>Why should we use semantic HTML?</h2>
+	<div class="double">
+		<p>Developers:
 		<ul>
-			<li>Problems with eyesight</li>
-			<li>Bad motor skills</li>
-			<li>Cognitive problems</li>
-			<li>Different devices</li>
+			<li>Readability</li>
+			<li>Less code for UX</li>
+			<li>SEO</li>
+			<li>It just works</li>
 		</ul>
-	</section>
+		<div class="next">
+			<p>Users:
+			<ul>
+				<li>Problems with eyesight</li>
+				<li>Bad motor skills</li>
+				<li>Cognitive problems</li>
+				<li>Different devices</li>
+			</ul>
+			</p>
+		</div>
+	</div>
+</section>
 
-	<section class="slide">
-		<h2>Why semantic?</h2>
-		<h2 class="shout">
-			<a href="https://www.w3.org/WAI/PF/aria/roles">We may use ARIA</a>
-		</h2>
-	</section>
+<section class="slide">
+	<h2 class="shout">
+		<a target="_blank" href="https://www.w3.org/WAI/PF/aria/roles">But may use ARIA!</a>
+		<span class="next">Really?</span>
+	</h2>
+</section>
 
-	<section class="slide">
-		<h2>Why semantic?</h2>
-		<figure>
-			<img class="cover next" style="width: 100vw; height: 100vh" src="https://www.w3.org/WAI/PF/aria/rdf_model.png" alt="Roles' relationship's model">
-		</figure>
-	</section>
+<section class="slide">
+	<style>
+		#roles-relationship-link {
+			position: absolute;
+			top: 40px;
+			left: 20px;
+		}
+	</style>
+	<a target="_blank" id="roles-relationship-link" href="https://www.w3.org/WAI/PF/aria/rdf_model.png">Open in new tab</a>
+	<figure>
+		<img class="full-screen" src="https://www.w3.org/WAI/PF/aria/rdf_model.png" alt="Roles' relationships' model">
+	</figure>
+</section>
 
-	<section class="slide">
-		<h2>Role via ARIA</h2>
-		<pre>
+<section class="slide">
+	<h2>Semantic via ARIA</h2>
+	<pre>
 			<code>&lt;div role="progressbar" aria-valuemin="0"</code>
 			<code>  aria-valuemax="100" aria-valuenow="80" /&gt;</code>
 		</pre>
-		Need more:
-		<ul>
-			<li>content for display progress</li>
-			<li>styles</li>
-		</ul>
-		Result:
-		<div>
-			<div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
-				<div class="progress-bar">
-					<span style="width: 80%;"></span>
-				</div>
+	Need more:
+	<ul>
+		<li>Content for display progress</li>
+		<li>Styles</li>
+	</ul>
+	Result:
+	<div>
+		<div role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80">
+			<div class="progress-bar">
+				<span style="width: 80%;"></span>
 			</div>
 		</div>
-		<style>
-			.progress-bar {
-				background-color: whiteSmoke;
-				border-radius: 2px;
-				box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+	</div>
+	<style>
+		.progress-bar {
+			background-color: whiteSmoke;
+			border-radius: 2px;
+			box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
 
-				width: 250px;
-				height: 20px;
+			width: 250px;
+			height: 20px;
 
-				position: relative;
-				display: block;
-			}
+			position: relative;
+			display: block;
+		}
 
-			.progress-bar > span {
-				background-color: blue;
-				border-radius: 2px;
+		.progress-bar > span {
+			background-color: blue;
+			border-radius: 2px;
 
-				display: block;
-				text-indent: -9999px;
-				max-height: 100%;
-			}
-		</style>
-	</section>
+			display: block;
+			text-indent: -9999px;
+			max-height: 100%;
+		}
+	</style>
+</section>
 
-	<section class="slide">
-		<h2>Role via tag name</h2>
-		<pre>
+<section class="slide">
+	<h2>Semantic via tag name</h2>
+	<pre>
 			<code>&lt;progress</code>
 			<code>  max="100"</code>
 			<code>  value="10"</code>
 			<code>/&gt;</code>
 		</pre>
-		Result:
-		<div>
-			<progress max="100" value="10">Some text inside</progress>
-		</div>
-	</section>
+	Result:
+	<div>
+		<progress max="100" value="10">Some text inside</progress>
+	</div>
+</section>
 
-	<section class="slide">
-		<h2>Focus state for div</h2>
-		<pre>
+<section class="slide">
+	<h2>Focus state for div</h2>
+	<pre>
 			<code>&lt;div</code>
 			<code>  role="button"</code>
 			<code>  aria-pressed="false"</code>
 			<code>  tabindex="0"</code>
 			<code> /&gt;</code>
 		</pre>
-		Result:
-		<div>
-			<div role="button" tabindex="0">Focus me</div>
-		</div>
-	</section>
+	Result:
+	<div>
+		<div role="button" tabindex="0">Focus me</div>
+	</div>
+</section>
 
-	<section class="slide">
-		<h2>Focus state for button</h2>
-		<pre>
+<section class="slide">
+	<h2>Focus state for button</h2>
+	<pre>
 			<code>&lt;button</code>
 			<code> /&gt;</code>
 		</pre>
-		Result:
-		<div>
-			<button>Focus me</button>
-		</div>
-	</section>
+	Result:
+	<div>
+		<button>Focus me</button>
+	</div>
+</section>
 
-	<section class="slide">
-		<h2>Click on div</h2>
-		<pre>
+<section class="slide">
+	<h2>Click on div</h2>
+	<pre>
 			<code>&lt;div</code>
 			<code>  tabindex="0"</code>
 			<code>  onclick="alert('click');"</code>
 			<code> /&gt;</code>
 		</pre>
-		Result:
-		<div>
-			<div role="button" tabindex="0" onclick="alert('click');">Click me</div>
-		</div>
-		<p class="next">And via keyboard?</p>
-	</section>
+	Result:
+	<div>
+		<div role="button" tabindex="0" onclick="alert('click');">Click me</div>
+	</div>
+	<p class="next">And via keyboard?</p>
+</section>
 
-	<section class="slide">
-		<h2>Click on button</h2>
-		<pre>
+<section class="slide">
+	<h2>Click on button</h2>
+	<pre>
 			<code>&lt;button</code>
 			<code>  onclick="alert('click');"</code>
 			<code> /&gt;</code>
 		</pre>
-		Result:
-		<div>
-			<button onclick="alert('click');">Click me</button>
-		</div>
-	</section>
+	Result:
+	<div>
+		<button onclick="alert('click');">Click me</button>
+	</div>
+</section>
 
-	<section class="slide">
-		<h2>Click on disabled div</h2>
-		<pre>
+<section class="slide">
+	<h2>Click on disabled div</h2>
+	<pre>
 			<code>&lt;div</code>
 			<code>  tabindex="0"</code>
 			<code>  onclick="alert('click')"</code>
 			<code>  disabled="disabled"</code>
 			<code> /&gt;</code>
 		</pre>
-		<p class="next">
-			<code>disabled</code> is not valid attr for <code>&lt;div /&gt;</code>
-		</p>
-	</section>
+	<p class="next">
+		<code>disabled</code> is not valid attr for <code>&lt;div /&gt;</code>
+	</p>
+</section>
 
-	<section class="slide">
-		<h2>Click on disabled div</h2>
-		<pre>
+<section class="slide">
+	<h2>Click on disabled div</h2>
+	<pre>
 			<code>&lt;div tabindex="0"</code>
 			<code>  onclick="event.getAttribute('aria-disabled') ? </code>
 			<code>           void 0 : alert('click')"</code>
 			<code>  aria-disabled="true"</code>
 			<code> /&gt;</code>
 		</pre>
-		Result:
-		<div>
-			<div role="button" tabindex="0" aria-disabled="true" onclick="event.target.getAttribute('aria-disabled') ? void 0 : alert('click')">Click me</div>
-		</div>
-	</section>
+	Result:
+	<div>
+		<div role="button" tabindex="0" aria-disabled="true" onclick="event.target.getAttribute('aria-disabled') ? void 0 : alert('click')">Click me</div>
+	</div>
+</section>
 
-	<section class="slide">
-		<h2>Click disabled on button</h2>
-		<pre>
+<section class="slide">
+	<h2>Click disabled on button</h2>
+	<pre>
 			<code>&lt;button</code>
 			<code>  disabled="disabled"</code>
 			<code> /&gt;</code>
 		</pre>
-		Result:
-		<div>
-			<button disabled onclick="alert('click');">Click me</button>
-		</div>
-	</section>
+	Result:
+	<div>
+		<button disabled onclick="alert('click');">Click me</button>
+	</div>
+</section>
 
-	<section class="slide">
-		<h2>Controls via keyboard</h2>
-		<pre>
+<section class="slide">
+	<h2>Controls via keyboard</h2>
+	<pre>
 			<code>&lt;input type="radio" name="radio-name" value="1" /&gt;</code>
 			<code>&lt;input type="radio" name="radio-name" value="2" /&gt;</code>
 			<code>&lt;input type="radio" name="radio-name" value="3" /&gt;</code>
 			<code>&lt;input type="radio" name="radio-name" value="4" /&gt;</code>
 		</pre>
-		<div>
-			Result:
-			<label><input type="radio" name="radio-name" value="1">1</label>
-			<label><input type="radio" name="radio-name" value="2">2</label>
-			<label><input type="radio" name="radio-name" value="3">3</label>
-			<label><input type="radio" name="radio-name" value="4">4</label>
-		</div>
-	</section>
+	<div>
+		Result:
+		<label><input type="radio" name="radio-name" value="1">1</label>
+		<label><input type="radio" name="radio-name" value="2">2</label>
+		<label><input type="radio" name="radio-name" value="3">3</label>
+		<label><input type="radio" name="radio-name" value="4">4</label>
+	</div>
+</section>
 
-	<section class="slide">
-		<h2>Label for inputs</h2>
-		<div>
-			<div><label>Input inside label: <input></label></div>
-			<div><label for="remote-id">Remote</label></div>
-			<div><label for="outside">Input outside label:</label> <input id="outside"></div>
-			<div><input id="remote-id"></div>
-		</div>
-	</section>
+<section class="slide">
+	<h2>Label for inputs</h2>
+	<div>
+		<div><label>Input inside label: <input></label></div>
+		<div><label for="remote-id">Remote</label></div>
+		<div><label for="outside">Input outside label:</label> <input id="outside"></div>
+		<div><input id="remote-id"></div>
+	</div>
+</section>
 
-	<section class="slide">
-		<h2>Why do we use?</h2>
-		<ul>
-			<li><code>a[href="#"]</code></li>
-			<li><code>a[onclick=""]</code></li>
-			<li><code>outline: none</code></li>
-			<li><code>&lt;button&gt;{{icon}}&lt;/button&gt;</code></li>
-		</ul>
-	</section>
+<section class="slide">
+	<h2>Why do we use?</h2>
+	<ul>
+		<li><code>a[href="#"]</code></li>
+		<li><code>a[onclick=""]</code></li>
+		<li><code>outline: none</code></li>
+		<li><code>&lt;button&gt;{{icon}}&lt;/button&gt;</code></li>
+	</ul>
+</section>
 
-	<section class="slide">
-		<h2>Helpful links</h2>
-		<ul>
-			<li><a href="https://a11yproject.com">a11yproject.com [en]</a></li>
-			<li><a href="http://a11y.me/">a11y.me [en]</a></li>
-			<li><a href="https://www.w3.org/standards/webdesign/accessibility">w3c.org [en]</a></li>
-			<li><a href="https://weblind.ru/">weblind.ru [ru]</a></li>
-		</ul>
-	</section>
+<section class="slide">
+	<h2>Why should we use semantic CSS?</h2>
+	<ul>
+		<li>Readability</li>
+		<li>Maintainability</li>
+	</ul>
+</section>
 
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
-	</section>
+<section class="slide">
+	<h2>HTML with Atomic CSS</h2>
+	<pre>
+		<code>&lt;div class="pb3 pb4-ns pt4 pt5-ns mt4 black-70 fl-l w-50-l"&gt;</code>
+		<code>  &lt;h1 class="f4 fw6 f1-ns lh-title measure mt0"&gt;Heading&lt;/h1&gt;</code>
+		<code>  &lt;p class="f5 f4-ns fw4 b measure dib-m lh-copy"&gt;Tagline&lt;/p&gt;</code>
+		<code>&lt;/div&gt;</code>
+	</pre>
+	<ul class="next">
+		<li>It's difficult to read. What is <code>f1-ns</code>?</li>
+		<li>Try to add some more attrs and find tags' content.</li>
+		<li>We are uglifiers.</li>
+	</ul>
+</section>
 
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
-	</section>
+<section class="slide">
+	<h2>HTML with semantic CSS</h2>
+	<pre>
+		<code>&lt;div class="hero"&gt;</code>
+		<code>  &lt;h1 class="hero-title"&gt;Heading&lt;/h1&gt;</code>
+		<code>  &lt;p class="hero-tagline"&gt;Tagline&lt;/p&gt;</code>
+		<code>&lt;/div&gt;</code>
+	</pre>
+	<p>No extra cognitive pressure for reading.</p>
+</section>
 
-	<footer class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
-	</footer>
+<section class="slide">
+	<h2>Lets add responsive</h2>
+	<ul>
+		<li>Each column has <code>20px</code> and <code>50px</code> padding on small and large screens</li>
+		<li>Each column has <code>2em</code> and <code>3em</code> font-size on small and large screens</li>
+	</ul>
+	<pre>
+		<code>&lt;div class="grid clearfix"&gt;</code>
+		<code>  &lt;div class="col pd20 pd50 fs2 fs3"&gt;Column 1&lt;/div&gt;</code>
+		<code>  &lt;div class="col pd20 pd50 fs2 fs3"&gt;Column 2&lt;/div&gt;</code>
+		<code>&lt;/div&gt;</code>
+	</pre>
+	<p class="next">
+		And we want to use <code>pd50</code> as it works on large screens for small screens.
+		We need to add extra modifiers for classnames for it.
+	</p>
+</section>
 
-	<div class="progress"></div>
+<section class="slide">
+	<h2>Responsive with semantic CSS</h2>
+	<pre class="highlight"><code>&lt;div class="hero"&gt;</code>
+		<code>  &lt;h1 class="hero-title"&gt;Heading&lt;/h1&gt;</code>
+		<code>  &lt;p class="hero-tagline"&gt;Tagline&lt;/p&gt;</code>
+		<code>&lt;/div&gt;</code>
+	</pre>
+	<p>
+		No HTML's changes. Just change CSS.
+	</p>
+</section>
 
-	<script src="node_modules/shower-core/shower.min.js"></script>
-	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+<section class="slide">
+	<h2>Go to CSS and change it</h2>
+	<p>
+		Try to find <code>.p2</code> inside project.<br>
+		<span class="next">And how about SCSS with circles?</span>
+	</p>
+	<p class="next">
+		Try to find <code>.hero-title</code> inside project.<br>
+		If you did not find <code>.hero-title</code> just try <code>.hero</code>.
+	</p>
+</section>
+
+<section class="slide">
+	<h2>Some elements' state</h2>
+	<p>For example, try to add another color for next anchor on <code>:hover</code>.</p>
+	<p><code>&lt;a class="padding-left-20 red" href="#"&gt;&lt;/a&gt;</code></p>
+</section>
+
+<section class="slide">
+	<h2>Some HTML with css like bootstrap</h2>
+	<pre>
+		<code>&lt;div class="red pull-left pb3"&gt;</code>
+		<code>&lt;div class="grid row"&gt;</code>
+		<code>&lt;div class="col-xs-4"&gt;</code>
+	</pre>
+</section>
+
+<section class="slide">
+	<h2>And CSS like bootstrap</h2>
+	<pre>
+		<code>.red { color: red; }</code>
+		<code>.pull-left { float: left; }</code>
+		<code>.pb3 { padding-bottom: 3px; }</code>
+		<code>.grid { display: grid; }</code>
+		<code>.row { margin-left: -15px; margin-right: -15px; }</code>
+		<code>.col-xs-4 {</code>
+		<code>  float: left; width: 25%;</code>
+		<code>  margin-right: 15px; margin-left: 15px;</code>
+		<code>}</code>
+	</pre>
+</section>
+
+<section class="slide">
+	<h2>Some HTML with semantic classnames</h2>
+	<pre>
+		<code>&lt;div class="basket"&gt;</code>
+		<code>&lt;div class="product"&gt;</code>
+		<code>&lt;div class="searchResults"&gt;</code>
+	</pre>
+</section>
+
+<section class="slide">
+	<h2>And CSS with semantic naming</h2>
+	<pre>
+		<code>.basket { color: red;</code>
+		<code>          float: left;</code>
+		<code>          padding-bottom: 3px; }</code>
+		<code>.product { display: grid;</code>
+		<code>           margin-left: -15px; margin-right: -15px; }</code>
+		<code>.searchResults {</code>
+		<code>  float: left; width: 25%;</code>
+		<code>  margin-right: 15px; margin-left: 15px;</code>
+		<code>}</code>
+	</pre>
+</section>
+
+<section class="slide">
+	<h2>And now we need to change styling</h2>
+	<p><img class="logo" src="pictures/atomic-css-logo.png" alt="Atomic CSS logo"> or <img class="logo" src="pictures/bootstrap-logo.png" alt="Bootstrap logo"> --&gt; change HTML</p>
+	<p class="next"><img class="logo" src="pictures/bem-logo.png" alt="BEM logo"> or any style encapsulation --&gt; change CSS</p>
+	<style>
+		.logo {
+			display: inline-block;
+			height: 60px;
+			width: auto;
+		}
+	</style>
+</section>
+
+<section class="slide">
+	<h2 class="shout">
+		Do we really use CSS for styling?
+	</h2>
+</section>
+
+
+
+<section class="slide">
+	<h2>Helpful links</h2>
+	<ul>
+		<li><a href="https://a11yproject.com">[HTML] a11yproject.com [en]</a></li>
+		<li><a href="http://a11y.me/">[HTML] a11y.me [en]</a></li>
+		<li><a href="https://www.w3.org/standards/webdesign/accessibility">[HTML] w3c.org [en]</a></li>
+		<li><a href="https://weblind.ru/">[HTML] weblind.ru [ru]</a></li>
+		<li><a href="https://maintainablecss.com/chapters/semantics/">[CSS] maintainablecss.com [en]</a></li>
+		<li><a href="http://robdodson.me/css-semantics/">[CSS] robdodson.me [en]</a></li>
+	</ul>
+</section>
+
+<section class="slide grid">
+	<h2>All nicely aligned to grid</h2>
+</section>
+
+<section class="slide" id="see-more">
+	<h2 class="shout">
+		<img src="pictures/logo.svg" alt="Shower logo">
+		<a href="https://github.com/shower/shower">See more on GitHub</a>
+	</h2>
+	<style>
+		#see-more h2 {
+			font-size:100px
+		}
+		#see-more img {
+			width:0.72em;
+			height:0.72em;
+		}
+	</style>
+</section>
+
+<footer class="badge">
+	<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+</footer>
+
+<div class="progress"></div>
+
+<script src="node_modules/shower-core/shower.min.js"></script>
+<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
 
 </body>
 </html>
