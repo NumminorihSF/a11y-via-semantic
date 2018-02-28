@@ -480,18 +480,33 @@
 </section>
 
 <section class="slide">
+	<h2>Types</h2>
+	<p>Don't change variable's type.</p>
+	<pre>
+		<code>let a = 1</code>
+		<code>// some code</code>
+		<code>a = '1'</code>
+	</pre>
+</section>
+
+<section class="slide">
 	<h2>Naming</h2>
 	<ul>
 		<li>Variable's or function's name should represent what variable is or what function do.</li>
 		<li>Don't obfuscate the name. <code>value</code> is better than <code>v</code>, and is much better than <code>val</code></li>
+		<li>Don't use confused names.</li>
 	</ul>
-	<div>Bad examples:
-		<pre>
-			<code>items.map(route =&gt; {...});</code>
-			<code>function handleError(e) {...}</code>
-			<code>function a() {}</code>
-		</pre>
-	</div>
+</section>
+
+<section class="slide">
+	<h2>Bad naming examples</h2>
+	<pre>
+		<code>items.map(route =&gt; {...});</code>
+		<code>function handleError(e) {...}</code>
+		<code>function a() {}</code>
+		<code>const myStringStr = 1</code>
+		<code>const items = () =&gt; {}</code>
+	</pre>
 </section>
 
 <section class="slide">
