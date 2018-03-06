@@ -510,6 +510,29 @@
 </section>
 
 <section class="slide">
+	<h2>What does this code do?</h2>
+	<pre>
+		<code>let x1 = 0;</code>
+		<code>let x2 = (x3, x4) => x3 === 0 ? x4(x3 - 1) : x4();</code>
+		<code>let x5 = () => console.log(x0++);</code>
+		<code>x2(10, x5);</code>
+	</pre>
+</section>
+
+<section class="slide">
+	<h2>Magic values</h2>
+	<pre>
+		<code>if (a > 9007199254740991) process.exit(1);</code>
+		<code><span class="next">if (a > Number.MAX_SAFE_INTEGER) process.exit(1);</span></code>
+	</pre>
+	<pre class="next">
+		<code>// data is Buffer from node.js</code>
+		<code>if (data[0] === 255 && data[1] === 254) ...</code>
+		<code class="next">const UTF16_BYTE_ORDER_MARK = [255, 254]</code>
+	</pre>
+</section>
+
+<section class="slide">
 	<h2>Helpful links</h2>
 	<ul>
 		<li><a href="https://a11yproject.com">[HTML] a11yproject.com [en]</a></li>
